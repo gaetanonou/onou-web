@@ -26,7 +26,7 @@
                   class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                 >
                   We are the solution to your IT. We solve your problem by making it ours.
-                  Our problem get converted by our solution, while the result gets deliverd to you. 
+                  Our problem gets converted by our solution, while the result is already deliverd to you. 
                 </p>
                 <div
                   class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
