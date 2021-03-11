@@ -354,8 +354,8 @@
                     />
                   </svg>
                   <p class="mt-6 text-2xl font-medium text-white">
-                    Each day we start in the future.<br />
-                    Can you keep up, or will you stay in the past?
+                    Each day we live in the future.<br />
+                    You can either keep up or stay in the past.
                   </p>
                 </div>
                 <footer class="mt-6">
