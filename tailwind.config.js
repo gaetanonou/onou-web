@@ -12,23 +12,18 @@ module.exports = {
       colors: {
         primary: { 
           '100': tailwindcssColors.cyan[100],
-          light: tailwindcssColors.cyan[300],
-          DEFAULT: tailwindcssColors.cyan[400],
-          dark: tailwindcssColors.cyan[500]
+          light: '#EB0A1D',
+          DEFAULT: '#d9091b',
+          dark: '#C40818',
         },
         secondary: {
           '100': tailwindcssColors.teal[100],
-          light: tailwindcssColors.teal[300],
-          DEFAULT: tailwindcssColors.teal[400],
-          dark: tailwindcssColors.teal[500],
+          light: '#1B52B1',
+          DEFAULT: '#164496',
+          dark: '#15418E',
         },
-        // primary: '#151728',
-        // primary: '#1A2980',
-        // primary: '#616EA8',
-        // primarydark: '#449FBB',
-        // secondary: '#26D0CE',
-        tertiary: '#7681b3'
-        // white: '#FFFFFF'
+        
+        accent: '#F09605',
       }
     },
     variants: {
