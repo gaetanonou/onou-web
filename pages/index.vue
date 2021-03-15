@@ -7,6 +7,9 @@
           <div
             class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32"
           >
+          <div class="px-4 sm:px-6 lg:px-8">
+            <LanguageSelector />
+          </div>
             <main
               class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
             >
@@ -19,14 +22,17 @@
                     >Global IT Solutions</span
                   >
                   <span class="block font-title xl:inline text-gray-900"
-                    ><span class="bg-clip-text text-transparent bg-gradient">O</span>NOU</span
+                    ><span class="bg-clip-text text-transparent bg-gradient"
+                      >O</span
+                    >NOU</span
                   >
                 </h1>
                 <p
                   class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                 >
-                  We are the solution to your IT. We solve your problem by making it ours.
-                  Our problem gets converted by our solution, while the result is already deliverd to you. 
+                  We are the solution to your IT. We solve your problem by
+                  making it ours. Our problem gets converted by our solution,
+                  while the result is already deliverd to you.
                 </p>
                 <div
                   class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
@@ -219,7 +225,7 @@
                       </span>
                     </div>
                     <h3
-                      class="mt-8 text-lg font-medium text-gray-800  tracking-tight"
+                      class="mt-8 text-lg font-medium text-gray-800 tracking-tight"
                     >
                       Office 365
                     </h3>
@@ -263,7 +269,7 @@
                       </span>
                     </div>
                     <h3
-                      class="mt-8 text-lg font-medium text-gray-800  tracking-tight"
+                      class="mt-8 text-lg font-medium text-gray-800 tracking-tight"
                     >
                       Cloud Native
                     </h3>
@@ -301,7 +307,7 @@
                       </span>
                     </div>
                     <h3
-                      class="mt-8 text-lg font-medium text-gray-800  tracking-tight"
+                      class="mt-8 text-lg font-medium text-gray-800 tracking-tight"
                     >
                       ICT Management
                     </h3>
@@ -420,144 +426,7 @@
                 </svg>
               </div>
               <div class="relative max-w-xl mx-auto">
-                <form
-                  action="#"
-                  method="POST"
-                  class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-                >
-                  <div>
-                    <label
-                      for="first_name"
-                      class="block text-sm font-medium text-white"
-                      >First name</label
-                    >
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="first_name"
-                        id="first_name"
-                        autocomplete="given-name"
-                        class="block w-full base-input"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      for="last_name"
-                      class="block text-sm font-medium text-white"
-                      >Last name</label
-                    >
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="last_name"
-                        id="last_name"
-                        autocomplete="family-name"
-                        class="block w-full base-input"
-                      />
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <label
-                      for="company"
-                      class="block text-sm font-medium text-white"
-                      >Company</label
-                    >
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="company"
-                        id="company"
-                        autocomplete="organization"
-                        class="block w-full base-input"
-                      />
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <label
-                      for="email"
-                      class="block text-sm font-medium text-white"
-                      >Email</label
-                    >
-                    <div class="mt-1">
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        autocomplete="email"
-                        class="block w-full base-input"
-                      />
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <label
-                      for="phone_number"
-                      class="block text-sm font-medium text-white"
-                      >Phone Number</label
-                    >
-                    <div class="mt-1 relative rounded-md shadow-sm">
-                      <input
-                        type="text"
-                        name="phone_number"
-                        id="phone_number"
-                        autocomplete="tel"
-                        class="block w-full base-input"
-                        placeholder="+32 000 00 00 00"
-                      />
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <label
-                      for="message"
-                      class="block text-sm font-medium text-white"
-                      >Message</label
-                    >
-                    <div class="mt-1">
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        class="block w-full base-input"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <div class="flex items-start">
-                      <div class="flex-shrink-0">
-                        <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-                        <button
-                          type="button"
-                          class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                          aria-pressed="false"
-                        >
-                          <span class="sr-only">Agree to policies</span>
-                          <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-                          <span
-                            aria-hidden="true"
-                            class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
-                          ></span>
-                        </button>
-                      </div>
-                      <div class="ml-3">
-                        <p class="text-base text-gray-300">
-                          By selecting this, you agree to the
-                          <a href="#" class="font-medium text-white underline"
-                            >Privacy Policy</a
-                          >
-                          and
-                          <a href="#" class="font-medium text-white underline"
-                            >Cookie Policy</a
-                          >.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <button type="submit" class="block w-full base-btn">
-                      Let's talk
-                    </button>
-                  </div>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>
@@ -855,12 +724,14 @@
 </template>
 
 <script>
-import { scrollTo } from 'scroll-js'
+import ContactForm from '../components/ContactForm.vue'
+// import { scrollTo } from 'scroll-js'
 
 export default {
+  components: { ContactForm },
   methods: {
     scrollTo() {
-      console.log('clicked')
+      // console.log('clicked')
     },
   },
 }

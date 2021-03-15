@@ -15,8 +15,9 @@
     "@tailwindcss/forms": "^0.2.1",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
-    "scenejs": "^1.5.0",
-    "scroll-js": "^3.3.0"
+    "nuxt-i18n": "^6.21.1",
+    "nuxt-validate": "^1.0.1",
+    "vee-validate": "^3.4.5"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^3.4.2",
