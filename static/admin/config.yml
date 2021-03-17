@@ -7,7 +7,7 @@ public_folder: /img
 
 collections:
   - name: 'service'
-    label: 'Service'
+    label: 'service'
     folder: 'content/service'
     format: 'frontmatter'
     create: true
