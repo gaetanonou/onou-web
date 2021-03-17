@@ -8,13 +8,22 @@ public_folder: /img
 collections:
   - name: 'service'
     label: 'Service'
-    folder: 'content/Service'
+    folder: 'content/service'
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
     editor:
-      preview: true
+      preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Short Description', name: 'shortDescription', widget: 'string' }
-      - { label: 'Icon', name: 'icon', widget: 'string' }
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Short Description'
+        name: 'short_description'
+        widget: 'string'
+      - label: 'Icon'
+        name: 'icon'
+        widget: 'string'
+      - label: 'Order'
+        name: 'order'
+        widget: 'number'
