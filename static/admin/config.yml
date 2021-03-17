@@ -27,3 +27,6 @@ collections:
       - label: 'Order'
         name: 'order'
         widget: 'number'
+      - label: 'Test'
+        name: 'test'
+        widget: 'string'
