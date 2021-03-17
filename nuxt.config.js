@@ -55,6 +55,11 @@ export default {
   i18n: {
     locales: ['nl', 'fr', 'en'],
     defaultLocale: 'nl',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,  // recommended
+    }
   },
 
   // // Build Configuration: https://go.nuxtjs.dev/config-build
