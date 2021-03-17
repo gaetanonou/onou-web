@@ -1,6 +1,7 @@
 ---
 title: ICT Management
-short_description: Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-  Et magna sit morbi lobortis.
+short_description: Ac tincidunt sapien vehicula erat auctor pellentesque
+  rhoncus. Et magna sit morbi lobortis.
 icon: fa
+order: 1
 ---
