@@ -19,7 +19,7 @@
                 >
                   <span
                     class="block xl:inline bg-clip-text text-transparent bg-gradient"
-                    >Global IT Solutions</span
+                    >Software Solutions</span
                   >
                   <span class="block font-title xl:inline text-gray-900"
                     ><span class="bg-clip-text text-transparent bg-gradient"
@@ -30,9 +30,7 @@
                 <p
                   class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                 >
-                  We are the solution to your IT. We solve your problem by
-                  making it ours. Our problem gets converted by our solution,
-                  while the result is already deliverd to you.
+                  We solve your problem by making it ours, while the result is already deliverd to you.
                 </p>
                 <div
                   class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
@@ -85,7 +83,7 @@
           </p>
           <div class="my-32">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="pt-6"  v-for="service of services" :key="service.title">
+              <div class="pt-6"  v-for="(service, index) of services" :key="index">
                 <div class="flow-root bg-gray-100 rounded-lg px-6 pb-8">
                   <div class="-mt-6">
                     <div>
@@ -113,10 +111,10 @@
                     <h3
                       class="mt-8 text-lg font-medium text-gray-800 tracking-tight"
                     >
-                    {{service.title}}
+                    {{service.i18n[$i18n.locale].title}}
                     </h3>
                     <p class="mt-5 text-base text-gray-500">
-                      {{service.short_description}}                    </p>
+                      {{service.i18n[$i18n.locale].short_description}}                    </p>
                   </div>
                 </div>
               </div>
@@ -330,25 +328,27 @@ import ContactForm from '../components/ContactForm.vue'
 // import { scrollTo } from 'scroll-js'
 
 export default {
-  components: { ContactForm },
-  head() {
-    return {
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-      ],
-    }
+  mounted(){
+    console.log('mounted')
+
+console.log(this.$i18n.locale)
+
   },
+  components: { ContactForm },
   async asyncData({ $content }) {
-    const services = await $content('service').fetch()
-    console.log(services)
+    const services = await $content('service')
+    .where({slug : '0-cloud-native'})
+    .sortBy('order', 'asc')
+    .fetch()
+
+console.log(services)
     return {
       services,
     }
   },
-
   methods: {
     scrollTo() {
-      // console.log('clicked')
+     
     },
   },
 }

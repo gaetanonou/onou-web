@@ -11,7 +11,7 @@
         >
         <div class="mt-1">
           <ValidationProvider
-            name="First name"
+            :name="$t('contactForm.firstName')"
             rules="required"
             v-slot="{ errors }"
           >
@@ -32,7 +32,7 @@
         >
         <div class="mt-1">
           <ValidationProvider
-            name="Last name"
+            :name="$t('contactForm.lastName')"
             rules="required"
             v-slot="{ errors }"
           >
@@ -48,9 +48,9 @@
         </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="company" class="block text-sm font-medium text-white"
-          >Company</label
-        >
+        <label for="company" class="block text-sm font-medium text-white">{{
+          $t('contactForm.company')
+        }}</label>
         <div class="mt-1">
           <input
             type="text"
@@ -68,7 +68,7 @@
         >
         <div class="mt-1">
           <ValidationProvider
-            name="Email"
+            :name="$t('contactForm.email')"
             rules="required|email"
             v-slot="{ errors }"
           >
@@ -89,7 +89,7 @@
         >
         <div class="mt-1 relative rounded-md shadow-sm">
           <ValidationProvider
-            name="Phone number"
+            :name="$t('contactForm.phoneNumber')"
             rules="required"
             v-slot="{ errors }"
           >
@@ -111,7 +111,7 @@
         >
         <div class="mt-1">
           <ValidationProvider
-            name="Message"
+            :name="$t('contactForm.message')"
             rules="required"
             v-slot="{ errors }"
           >
@@ -143,15 +143,8 @@
             </button>
           </div>
           <div class="ml-3">
-            <p class="text-base text-gray-300">
-              By selecting this, you agree to the
-              <a href="#" class="font-medium text-white underline"
-                >Privacy Policy</a
-              >
-              and
-              <a href="#" class="font-medium text-white underline"
-                >Cookie Policy</a
-              >.
+            <p class="text-base text-gray-300" v-html="$t('contactForm.privacyAndPolicyConsentHtml')">
+            
             </p>
           </div>
         </div>

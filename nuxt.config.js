@@ -63,8 +63,26 @@ export default {
 
   // Nuxt i18n configuration
   i18n: {
-    locales: ['nl', 'fr', 'en'],
-    defaultLocale: 'nl',
+    lazy: true,
+    langDir:'lang',
+    locales: [
+      {
+        code: 'nl',
+        file: 'nl-BE.js'
+      },
+      {
+        code: 'fr',
+        file: 'fr-FR.js'
+      },
+      {
+        code: 'en',
+        file: 'en-US.js'
+      },
+    ],
+    defaultLocale:  {
+      code: 'nl',
+      file: 'nl-BE.js'
+    },
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
