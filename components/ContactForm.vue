@@ -7,7 +7,7 @@
     >
       <div>
         <label for="first_name" class="block text-sm font-medium text-white"
-          >First name *</label
+          >{{$t('contactForm.firstName')}} *</label
         >
         <div class="mt-1">
           <ValidationProvider
@@ -28,7 +28,7 @@
       </div>
       <div>
         <label for="last_name" class="block text-sm font-medium text-white"
-          >Last name *</label
+          >{{$t('contactForm.lastName')}} *</label
         >
         <div class="mt-1">
           <ValidationProvider
@@ -64,7 +64,7 @@
 
       <div class="sm:col-span-2">
         <label for="email" class="block text-sm font-medium text-white"
-          >Email *</label
+          >{{$t('contactForm.email')}} *</label
         >
         <div class="mt-1">
           <ValidationProvider
@@ -85,7 +85,7 @@
       </div>
       <div class="sm:col-span-2">
         <label for="phone_number" class="block text-sm font-medium text-white"
-          >Phone Number</label
+          >{{$t('contactForm.phoneNumber')}}</label
         >
         <div class="mt-1 relative rounded-md shadow-sm">
           <ValidationProvider
@@ -107,7 +107,7 @@
       </div>
       <div class="sm:col-span-2">
         <label for="message" class="block text-sm font-medium text-white"
-          >Message *</label
+          >{{$t('contactForm.message')}} *</label
         >
         <div class="mt-1">
           <ValidationProvider
@@ -143,9 +143,7 @@
             </button>
           </div>
           <div class="ml-3">
-            <p class="text-base text-gray-300" v-html="$t('contactForm.privacyAndPolicyConsentHtml')">
-            
-            </p>
+            <p class="text-base text-gray-300" v-html="$t('contactForm.privacyAndPolicyConsentHtml')"></p>
           </div>
         </div>
       </div>

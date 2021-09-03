@@ -30,14 +30,15 @@
                 <p
                   class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
                 >
-                  We solve your problem by making it ours, while the result is already deliverd to you.
+                  business process // application development
                 </p>
                 <div
                   class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
                 >
                   <div class="rounded-md shadow">
                     <a
-                      href="#"
+                      href="javascript:"
+                      @click="scrollToContactContainer"
                       class="w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md text-white bg-gradient md:py-4 md:text-lg md:px-10"
                     >
                       Get in touch
@@ -83,38 +84,34 @@
           </p>
           <div class="my-32">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="pt-6"  v-for="(service, index) of services" :key="index">
+              <div
+                class="pt-6"
+                v-for="(service, index) of services"
+                :key="index"
+              >
                 <div class="flow-root bg-gray-100 rounded-lg px-6 pb-8">
                   <div class="-mt-6">
                     <div>
                       <span
                         class="inline-flex items-center justify-center p-3 bg-gradient-to-r bg-gradient rounded-md shadow-lg"
                       >
-                        <!-- Heroicon name: outline/cloud-upload -->
-                        <svg
-                          class="h-6 w-6 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
+                        <lord-icon
+                          :src="service.i18n[$i18n.locale].icon"
+                          colors="primary:#ffffff,secondary:#ffffff"
+                          stroke="120"
+                          style="width: 56px; height: 56px"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                          />
-                        </svg>
+                        </lord-icon>
                       </span>
                     </div>
                     <h3
                       class="mt-8 text-lg font-medium text-gray-800 tracking-tight"
                     >
-                    {{service.i18n[$i18n.locale].title}}
+                      {{ service.i18n[$i18n.locale].title }}
                     </h3>
                     <p class="mt-5 text-base text-gray-500">
-                      {{service.i18n[$i18n.locale].short_description}}                    </p>
+                      {{ service.i18n[$i18n.locale].short_description }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -160,8 +157,10 @@
                     />
                   </svg>
                   <p class="mt-6 text-2xl font-medium text-white">
-                    Each day we live in the future.<br />
-                    You can either keep up or stay in the past.
+                    <!-- Each day we live in the future.<br />
+                    You can either keep up or stay in the past. -->
+
+                    Simple and effective, yet enforced business processes <br />are the key to your success
                   </p>
                 </div>
                 <footer class="mt-6">
@@ -178,6 +177,7 @@
       <!-- This example requires Tailwind CSS v2.0+ -->
 
       <div
+        id="contact-container"
         class="max-w-7xl mx-auto text-center py-24 px-4 sm:px-6 lg:py-32 lg:px-8"
       >
         <h2
@@ -327,33 +327,24 @@
 import ContactForm from '../components/ContactForm.vue'
 // import { scrollTo } from 'scroll-js'
 
+import { scrollIntoView } from 'scroll-js';
+
+
 export default {
-  mounted(){
-    console.log('mounted')
-
-console.log(this.$i18n.locale)
-
-  },
   components: { ContactForm },
   async asyncData({ $content }) {
-    const services = await $content('service')
-    .where({slug : '0-cloud-native'})
-    .sortBy('order', 'asc')
-    .fetch()
-
-console.log(services)
+    const services = await $content('service').sortBy('order', 'asc').fetch()
     return {
       services,
     }
   },
   methods: {
-    scrollTo() {
-     
+    scrollToContactContainer() {
+      let element = document.getElementById('contact-container');
+      scrollIntoView(element, document.body, { behavior: 'smooth' });
     },
   },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
