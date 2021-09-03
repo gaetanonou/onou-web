@@ -325,8 +325,6 @@
 
 <script>
 import ContactForm from '../components/ContactForm.vue'
-// import { scrollTo } from 'scroll-js'
-
 import { scrollIntoView } from 'scroll-js';
 
 

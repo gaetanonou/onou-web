@@ -84,10 +84,7 @@ export default {
         file: 'en-US.js'
       },
     ],
-    defaultLocale:  {
-      code: 'nl',
-      file: 'nl-BE.js'
-    },
+    defaultLocale:'en', 
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
